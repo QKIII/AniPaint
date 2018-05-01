@@ -38,8 +38,6 @@ $("#follower").click(function(e) {
 
   // increase count for animation switch
   // aniCount++;
-
-
   animation.goToAndPlay(0, 0)
   $('#bm-' + counter).css({
       left: e.pageX - 200,
@@ -49,20 +47,9 @@ $("#follower").click(function(e) {
 
       $("#bm-" + (counter - 20)).remove();
       };
-
-
-
   });
 
-
-
-
-  $("#follower").append('<div class="bm" id="bm-' + counter + '"> </div>')
-  var animation = lottie.loadAnimation({
-      container: document.getElementById('bm-' + counter),
-      renderer: 'svg',
-      loop: true,
-      autoplay: false,
-      animationData: aniPick
-
-  })
+$("#undo").click(function(e) {
+        $("#bm-" + (counter)).remove();
+      
+})
